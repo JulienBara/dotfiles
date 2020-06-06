@@ -16,8 +16,14 @@ else
 	curl -L http://install.ohmyz.sh | sh
 fi
 
-# link zsh config
-ln -fs $(pwd)/.zshrc ~/.zshrc 
-
 # install powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+if [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k ]; then
+	echo "powerlevel10k is already installed. Skipping.."
+else
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+fi
+
+
+# link configs
+ln -fs $(pwd)/.zshrc ~/.zshrc 
+ln -fs $(pwd)/.p10k.zsh ~/.p10k.zsh 
