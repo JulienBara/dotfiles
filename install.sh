@@ -16,6 +16,13 @@ else
 	curl -L http://install.ohmyz.sh | sh
 fi
 
+# install zsh-autosuggestions
+if [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
+	echo "zsh-autosuggestions is already installed. Skipping.."
+else
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
 # install powerlevel10k
 if [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k ]; then
 	echo "powerlevel10k is already installed. Skipping.."
