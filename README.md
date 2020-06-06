@@ -6,7 +6,7 @@ To get started, run:
 
 ```
 git clone https://github.com/JulienBara/dotfiles.git
-./dotfiles/install.sh
+sudo ./dotfiles/install.sh
 ```
 
 ## Setup
