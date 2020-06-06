@@ -1,3 +1,6 @@
+# Set current user as default user (this value is used by agnoster)
+export DEFAULT_USER=$USER
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
